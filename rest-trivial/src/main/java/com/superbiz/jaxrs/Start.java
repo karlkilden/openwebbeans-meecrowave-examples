@@ -6,9 +6,9 @@ import org.apache.meecrowave.Meecrowave;
 public class Start {
     public static void main(String[] args) {
         new Meecrowave(new Meecrowave.Builder() {{
-            setHttpPort(8888);
-            setTomcatScanning(false);
-            setTomcatAutoSetup(false);
+            setHttpPort(8181);
+            setTomcatScanning(true);
+            setTomcatAutoSetup(true);
             setRealm(new JAASRealm());
             user("admin", "secret");
         }})

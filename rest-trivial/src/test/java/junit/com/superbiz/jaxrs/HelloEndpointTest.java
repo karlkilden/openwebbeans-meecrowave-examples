@@ -41,7 +41,7 @@ public class HelloEndpointTest {
         final Client client = ClientBuilder.newClient();
         try {
             assertEquals("Hello World", client.target("http://localhost:" + configuration.getHttpPort())
-                    .path("/hello")
+                    .path("/test/hello")
                     .request(APPLICATION_JSON_TYPE)
                     .get(String.class));
         } finally {
